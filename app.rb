@@ -2,6 +2,6 @@ require "sinatra"
 
 class App < Sinatra::Application
   get "/" do
-    "openshift!"
+    "openshift: #{ENV["APP_GREETING"]}"
   end
 end
