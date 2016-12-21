@@ -7,7 +7,7 @@ class App < Sinatra::Application
     mongodb_uri = ENV["MONGODB_URI"]
     output = "openshift: #{ENV["APP_GREETING"]}"
     client = Mongo::Client.new(mongodb_uri)
-    output += "Mongo databases: #{client.list_databases}"
+    output += "Mongo collectionss: #{client.collections}"
     output
   end
 end
