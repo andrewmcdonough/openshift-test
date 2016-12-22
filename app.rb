@@ -10,4 +10,10 @@ class App < Sinatra::Application
     output += "Mongo collectionss: #{client.collections}"
     output
   end
+
+  get "/env" do
+    output = "<pre>"
+    ENV.sort.each { |k, v| output += "#{k} => #{v}<br />" }
+    output += "</pre>"
+  end
 end
