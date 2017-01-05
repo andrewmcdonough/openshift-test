@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# always use exec so signal propagation to the process works well
+# https://blog.openshift.com/override-s2i-builder-scripts/
+exec bundle exec clockwork clock.rb
